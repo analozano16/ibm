@@ -1,0 +1,40 @@
+package co.com.test.dao;
+
+public interface IPruebaSQL {
+
+	// get
+	public static String getArchivos = "{CALL PKG_ADMINISTRACION.PRGT_ARCHIVO(?,?,?,?,?,?,?,?,?,?,?)}";	
+	public static String getCarpetas = "{CALL PKG_ADMINISTRACION.PRGT_CARPETA(?,?,?,?,?,?)}";	
+	public static String getCentroGestors = "{CALL PKG_ADMINISTRACION.PRGT_CENTRO_GESTOR(?,?,?,?)}";	
+	public static String getCentroPoblados = "{CALL PKG_ADMINISTRACION.PRGT_CENTRO_POBLADO(?,?,?,?,?,?)}";	
+	public static String getClaseTerritorios = "{CALL PKG_ADMINISTRACION.PRGT_CLASE_TERRITORIO(?,?,?,?)}";	
+	public static String getCorteEvaluacions = "{CALL PKG_ADMINISTRACION.PRGT_CORTE_EVALUACION(?,?,?,?,?,?)}";	
+	public static String getDepartamentos = "{CALL PKG_ADMINISTRACION.PRGT_DEPARTAMENTO(?,?,?,?,?)}";	
+	public static String getDependencias = "{CALL PKG_ADMINISTRACION.PRGT_DEPENDENCIA(?,?,?,?,?,?)}";	
+	public static String getEvaluacions = "{CALL PKG_ADMINISTRACION.PRGT_EVALUACION(?,?,?,?,?,?,?,?)}";	
+	public static String getMunicipios = "{CALL PKG_ADMINISTRACION.PRGT_MUNICIPIO(?,?,?,?,?,?)}";	
+	public static String getPaiss = "{CALL PKG_ADMINISTRACION.PRGT_PAIS(?,?,?,?)}";	
+	public static String getParametros = "{CALL PKG_ADMINISTRACION.PRGT_PARAMETRO(?,?,?,?,?)}";	
+	public static String getSubregions = "{CALL PKG_ADMINISTRACION.PRGT_SUBREGION(?,?,?,?)}";	
+	public static String getTipoArchivos = "{CALL PKG_ADMINISTRACION.PRGT_TIPO_ARCHIVO(?,?,?,?)}";	
+	public static String getTipoCorteEvaluacions = "{CALL PKG_ADMINISTRACION.PRGT_TIPO_CORTE_EVALUACION(?,?,?,?)}";	
+	public static String getDominios = "{CALL PKG_ADMINISTRACION.PRGT_DOMINIO(?,?,?,?)}";	
+	
+	// crud
+	public static String crudArchivo = "{CALL PKG_ADMINISTRACION.PRCT_ARCHIVO(?,?,?,?,?,?,?,?,?,?,?)}";
+	public static String crudCarpeta = "{CALL PKG_ADMINISTRACION.PRCT_CARPETA(?,?,?,?,?,?)}";
+	public static String crudCentroGestor = "{CALL PKG_ADMINISTRACION.PRCT_CENTRO_GESTOR(?,?,?,?,?,?,?,?)}";
+	public static String crudCentroPoblado = "{CALL PKG_ADMINISTRACION.PRCT_CENTRO_POBLADO(?,?,?,?,?,?)}";
+	public static String crudClaseTerritorio = "{CALL PKG_ADMINISTRACION.PRCT_CLASE_TERRITORIO(?,?,?,?)}";
+	public static String crudCorteEvaluacion = "{CALL PKG_ADMINISTRACION.PRCT_CORTE_EVALUACION(?,?,?,?,?,?)}";
+	public static String crudDepartamento = "{CALL PKG_ADMINISTRACION.PRCT_DEPARTAMENTO(?,?,?,?,?)}";
+	public static String crudDependencia = "{CALL PKG_ADMINISTRACION.PRCT_DEPENDENCIA(?,?,?,?,?,?,?,?)}";
+	public static String crudEvaluacion = "{CALL PKG_ADMINISTRACION.PRCT_EVALUACION(?,?,?,?,?,?,?,?)}";
+	public static String crudMunicipio = "{CALL PKG_ADMINISTRACION.PRCT_MUNICIPIO(?,?,?,?,?,?)}";
+	public static String crudPais = "{CALL PKG_ADMINISTRACION.PRCT_PAIS(?,?,?,?)}";
+	public static String crudParametro = "{CALL PKG_ADMINISTRACION.PRCT_PARAMETRO(?,?,?,?,?)}";
+	public static String crudSubregion = "{CALL PKG_ADMINISTRACION.PRCT_SUBREGION(?,?,?,?)}";
+	public static String crudTipoArchivo = "{CALL PKG_ADMINISTRACION.PRCT_TIPO_ARCHIVO(?,?,?,?)}";
+	public static String crudTipoCorteEvaluacion = "{CALL PKG_ADMINISTRACION.PRCT_TIPO_CORTE_EVALUACION(?,?,?,?)}";
+	
+}

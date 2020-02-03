@@ -1,0 +1,38 @@
+package co.com.test.dao;
+
+import java.util.List;
+import javax.ejb.Local;
+
+import co.com.test.model.Asesor;
+import co.com.test.model.Cliente;
+import co.com.test.model.Consumo;
+import co.com.test.model.Tarjeta;
+
+@Local
+public interface IPruebaDAO {
+
+	// get
+	public List <Asesor> getAsesores(Asesor asesor) throws Exception;	
+	public List <Cliente> getClientes(Cliente cliente) throws Exception;	
+	public List <Consumo> getConsumos(Consumo consumo) throws Exception;
+	public List <Tarjeta> getTarjetas(Tarjeta tarjeta) throws Exception;	
+	
+	// delete
+	public boolean deleteAsesor(Asesor asesor) throws Exception;	
+	public boolean deleteCliente(Cliente cliente) throws Exception;	
+	public boolean deleteConsumo(Consumo consumo) throws Exception;	
+	public boolean deleteTarjeta(Tarjeta tarjeta) throws Exception;	
+	
+	// insert
+	public Asesor insertAsesor(Asesor archivo) throws Exception;	
+	public Cliente insertCliente(Cliente cliente) throws Exception;
+	public Consumo insertConsumo(Consumo consumo) throws Exception;	
+	public Tarjeta insertTarjeta(Tarjeta tarjeta) throws Exception;
+	
+	// update
+	public Archivo updateArchivo(Archivo archivo) throws Exception;	
+	public Carpeta updateCarpeta(Carpeta carpeta) throws Exception;	
+	public CentroGestor updateCentroGestor(CentroGestor centroGestor) throws Exception;	
+	public CentroPoblado updateCentroPoblado(CentroPoblado centroPoblado) throws Exception;
+	
+}	

@@ -1,0 +1,87 @@
+package co.com.test.dao;
+
+import java.util.List;
+
+import javax.ejb.Local;
+
+import co.com.test.model.Asesor;
+import co.com.test.model.Cliente;
+import co.com.test.model.Consumo;
+import co.gov.antioquia.sspdd.administracion.exception.AdministracionException;
+import co.gov.antioquia.sspdd.administracion.exception.AdministracionNotExistsException;
+import co.gov.antioquia.sspdd.administracion.model.CentroGestor;
+import co.gov.antioquia.sspdd.administracion.model.CentroPoblado;
+import co.gov.antioquia.sspdd.administracion.model.ClaseTerritorio;
+import co.gov.antioquia.sspdd.administracion.model.Departamento;
+import co.gov.antioquia.sspdd.administracion.model.Dependencia;
+import co.gov.antioquia.sspdd.administracion.model.Dominio;
+import co.gov.antioquia.sspdd.administracion.model.Municipio;
+import co.gov.antioquia.sspdd.administracion.model.Pais;
+import co.gov.antioquia.sspdd.administracion.model.Parametro;
+import co.gov.antioquia.sspdd.administracion.model.Subregion;
+import co.gov.antioquia.sspdd.util.model.paginacion.Archivo;
+import co.gov.antioquia.sspdd.util.model.paginacion.Carpeta;
+import co.gov.antioquia.sspdd.util.model.paginacion.TipoArchivo;
+
+@Local
+public interface IPruebaDAO {
+
+	// get
+	public List <Asesor> getAsesores(Asesor asesor) throws Exception;	
+	public List <Cliente> getClientes(Cliente cliente) throws Exception;	
+	public List <Consumo> getConsumos(CentroGestor centroGestor) throws AdministracionException;
+	public List <CentroPoblado> getCentroPoblados(CentroPoblado centroPoblado) throws AdministracionException;	
+	public List <ClaseTerritorio> getClaseTerritorios(ClaseTerritorio claseTerritorio) throws AdministracionException;	
+	public List <Departamento> getDepartamentos(Departamento departamento) throws AdministracionException;	
+	public List <Dependencia> getDependencias(Dependencia dependencia) throws AdministracionException;	
+	public List <Municipio> getMunicipios(Municipio municipio) throws AdministracionException;	
+	public List <Pais> getPaiss(Pais pais) throws AdministracionException;	
+	public List <Parametro> getParametros(Parametro parametro) throws AdministracionException;	
+	public List <Subregion> getSubregions(Subregion subregion) throws AdministracionException;	
+	public List <TipoArchivo> getTipoArchivos(TipoArchivo tipoArchivo) throws AdministracionException;	
+	public List <Dominio> getDominios(Dominio dominio) throws AdministracionException;
+	
+	// delete
+	public boolean deleteArchivo(Archivo archivo) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteCarpeta(Carpeta carpeta) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteCentroGestor(CentroGestor centroGestor) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteCentroPoblado(CentroPoblado centroPoblado) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteClaseTerritorio(ClaseTerritorio claseTerritorio) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteDepartamento(Departamento departamento) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteDependencia(Dependencia dependencia) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteMunicipio(Municipio municipio) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deletePais(Pais pais) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteParametro(Parametro parametro) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteSubregion(Subregion subregion) throws AdministracionException, AdministracionNotExistsException;	
+	public boolean deleteTipoArchivo(TipoArchivo tipoArchivo) throws AdministracionException, AdministracionNotExistsException;	
+	
+	
+	// insert
+	public Archivo insertArchivo(Archivo archivo) throws AdministracionException, AdministracionNotExistsException;	
+	public Carpeta insertCarpeta(Carpeta carpeta) throws AdministracionException, AdministracionNotExistsException;
+	public CentroGestor insertCentroGestor(CentroGestor centroGestor) throws AdministracionException, AdministracionNotExistsException;	
+	public CentroPoblado insertCentroPoblado(CentroPoblado centroPoblado) throws AdministracionException, AdministracionNotExistsException;
+	public ClaseTerritorio insertClaseTerritorio(ClaseTerritorio claseTerritorio) throws AdministracionException, AdministracionNotExistsException;
+	public Departamento insertDepartamento(Departamento departamento) throws AdministracionException, AdministracionNotExistsException;	
+	public Dependencia insertDependencia(Dependencia dependencia) throws AdministracionException, AdministracionNotExistsException;	
+	public Municipio insertMunicipio(Municipio municipio) throws AdministracionException, AdministracionNotExistsException;	
+	public Pais insertPais(Pais pais) throws AdministracionException, AdministracionNotExistsException;	
+	public Parametro insertParametro(Parametro parametro) throws AdministracionException, AdministracionNotExistsException;	
+	public Subregion insertSubregion(Subregion subregion) throws AdministracionException, AdministracionNotExistsException;	
+	public TipoArchivo insertTipoArchivo(TipoArchivo tipoArchivo) throws AdministracionException, AdministracionNotExistsException;	
+	
+	// update
+	public Archivo updateArchivo(Archivo archivo) throws AdministracionException, AdministracionNotExistsException;	
+	public Carpeta updateCarpeta(Carpeta carpeta) throws AdministracionException, AdministracionNotExistsException;	
+	public CentroGestor updateCentroGestor(CentroGestor centroGestor) throws AdministracionException, AdministracionNotExistsException;	
+	public CentroPoblado updateCentroPoblado(CentroPoblado centroPoblado) throws AdministracionException, AdministracionNotExistsException;
+	public ClaseTerritorio updateClaseTerritorio(ClaseTerritorio claseTerritorio) throws AdministracionException, AdministracionNotExistsException;	
+	public Departamento updateDepartamento(Departamento departamento) throws AdministracionException, AdministracionNotExistsException;	
+	public Dependencia updateDependencia(Dependencia dependencia) throws AdministracionException, AdministracionNotExistsException;	
+	public Municipio updateMunicipio(Municipio municipio) throws AdministracionException, AdministracionNotExistsException;	
+	public Pais updatePais(Pais pais) throws AdministracionException, AdministracionNotExistsException;	
+	public Parametro updateParametro(Parametro parametro) throws AdministracionException, AdministracionNotExistsException;	
+	public Subregion updateSubregion(Subregion subregion) throws AdministracionException, AdministracionNotExistsException;	
+	public TipoArchivo updateTipoArchivo(TipoArchivo tipoArchivo) throws AdministracionException, AdministracionNotExistsException;	
+
+}	

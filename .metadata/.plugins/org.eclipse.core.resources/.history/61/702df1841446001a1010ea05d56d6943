@@ -1,0 +1,13 @@
+var app = angular.module("Clientes",[]);
+
+app.controller("ClienteController", function($scope){
+	
+	$scope.init = function()
+    {
+		 angular.element(document).ready(function () {
+	        document.getElementById('msg').innerHTML = 'Hello';
+	    });
+    }
+
+    $scope.init();
+});

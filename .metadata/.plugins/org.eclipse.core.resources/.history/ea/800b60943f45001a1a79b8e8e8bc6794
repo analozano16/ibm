@@ -1,0 +1,29 @@
+Ext.require([ 
+    'Ext.container.Viewport'
+]);
+
+Ext.Loader.setConfig({
+    enabled: true
+});
+
+Ext.onReady(function(){
+	
+}); 
+
+Ext.application({	
+	controllers: [
+		
+		 // controlador
+	     'co.com.test',
+	                 
+	    
+	],
+	views: [
+	        'Viewport'
+	],	
+    appFolder: 'frontEnd',
+    name: 'APP',
+    launch: function() {
+    	
+    }
+});

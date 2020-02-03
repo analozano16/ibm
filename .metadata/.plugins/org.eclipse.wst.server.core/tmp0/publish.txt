@@ -1,0 +1,3 @@
+#GlassFish 3
+#Sun Feb 02 19:05:58 COT 2020
+org.eclipse.jst.jee.server\:prueba_banco_war=C\:\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\prueba_banco_war

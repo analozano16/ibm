@@ -1,0 +1,18 @@
+package co.com.test.dao;
+
+public interface IPruebaSQL {
+
+	// get
+	public static String getAsesores = "{CALL PKG_ADMINISTRACION.PRGT_ARCHIVO(?,?,?,?,?,?,?,?,?,?,?)}";	
+	public static String getClientes = "{CALL PKG_ADMINISTRACION.PRGT_CARPETA(?,?,?,?,?,?)}";	
+	public static String getConsumos = "{CALL PKG_ADMINISTRACION.PRGT_CENTRO_GESTOR(?,?,?,?)}";	
+	public static String getTarjetas = "{CALL PKG_ADMINISTRACION.PRGT_CENTRO_POBLADO(?,?,?,?,?,?)}";	
+	
+	// crud
+	public static String crudArchivo = "{CALL PKG_ADMINISTRACION.PRCT_ARCHIVO(?,?,?,?,?,?,?,?,?,?,?)}";
+	public static String crudCarpeta = "{CALL PKG_ADMINISTRACION.PRCT_CARPETA(?,?,?,?,?,?)}";
+	public static String crudCentroGestor = "{CALL PKG_ADMINISTRACION.PRCT_CENTRO_GESTOR(?,?,?,?,?,?,?,?)}";
+	public static String crudCentroPoblado = "{CALL PKG_ADMINISTRACION.PRCT_CENTRO_POBLADO(?,?,?,?,?,?)}";
+	public static String crudClaseTerritorio = "{CALL PKG_ADMINISTRACION.PRCT_CLASE_TERRITORIO(?,?,?,?)}";
+		
+}

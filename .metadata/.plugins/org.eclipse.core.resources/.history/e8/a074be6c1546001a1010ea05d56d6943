@@ -1,0 +1,12 @@
+var app = angular.module("Clientes",[]);
+
+app.controller("ClienteController", function($scope){
+	
+	
+		  console.log("dddddd");
+		 angular.element(document).ready(function () {
+	        
+	      
+	    });
+   
+});

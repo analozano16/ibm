@@ -1,0 +1,11 @@
+package co.com.test.model;
+
+public class TipoEspecialidad {
+	
+	private long codigo;
+	
+	private String nombre;
+	
+	private String descripcion;
+
+}

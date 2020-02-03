@@ -1,0 +1,20 @@
+var app = angular.module("Clientes", ['ngRoute']);
+
+app.config(function($routeProvider) {
+	$routeProvider.when('/', {template: 'Gutten'});
+	$routeProvider.when('/en', {template: 'Hello'});
+	$routeProvider.when('/es', {template: 'Hola'});
+	$routeProvider.otherwise({redirectTo: '/'});
+});
+
+
+app.controller("ClienteController", function($scope){
+	
+	
+		  console.log("dddddd");
+		 angular.element(document).ready(function () {
+	        
+	      
+	    });
+   
+});

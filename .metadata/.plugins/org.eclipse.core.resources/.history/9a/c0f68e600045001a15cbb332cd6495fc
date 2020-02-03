@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                        http://www.springframework.org/schema/context 
+                        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+                        http://www.springframework.org/schema/mvc 
+                        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+                        http://www.springframework.org/schema/tx
+                        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+                        http://www.springframework.org/schema/task 
+                        http://www.springframework.org/schema/task/spring-task-3.2.xsd"
+                        >
+                   
+                   <!-- se importa el controller de los resportes del sistema en el contextBean.xml -->
+<!-- 				   <import resource="spring/contextBean.xml" /> -->
+<!-- paquete del controler -->
+<context:component-scan base-package="co.com" />
+
+<mvc:annotation-driven />
+
+<task:annotation-driven/>
+
+<context:property-placeholder location=" /WEB-INF/spring/task.properties"/>
+
+<!-- soporta html - json y xml  -->
+<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+  <property name="order" value="1" />
+  <property name="contentNegotiationManager">
+      <bean class="org.springframework.web.accept.ContentNegotiationManager">
+          <constructor-arg>
+              <bean class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy">
+                  <constructor-arg>
+                      <map>
+                      	  <entry key="html" value="application/html"/>
+                          <entry key="json" value="application/json"/>
+                          <entry key="xml" value="application/xml"/>
+                      </map>
+                  </constructor-arg>
+              </bean>
+          </constructor-arg>
+      </bean>
+  </property>
+<!--   <property name="defaultViews"> -->
+<!--       <list> -->
+<!--           JSON View -->
+<!--           <bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" /> -->
+
+<!--           XML View -->
+<!--           <bean class="org.springframework.web.servlet.view.xml.MarshallingView"> -->
+<!--               <constructor-arg> -->
+<!--                   <bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller"> -->
+<!--                       <property name="packagesToScan"> -->
+<!--                           <list> -->
+<!--                               <value>documentLoader.domain</value> -->
+<!--                           </list> -->
+<!--                       </property> -->
+<!--                   </bean> -->
+<!--               </constructor-arg> -->
+<!--           </bean>  -->
+<!--       </list> -->
+<!--   </property>  -->
+</bean>
+
+<!-- <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"> -->
+<!--     <property name="supportedMediaTypes"> -->
+<!--         <array> -->
+<!--             <value>text/html</value> -->
+<!--             <value>application/json</value> -->
+<!--         </array> -->
+<!--     </property> -->
+<!-- </bean> -->
+
+<!-- <bean -->
+<!--     id="stringHttpMessageConverter" -->
+<!--     class="org.springframework.http.converter.StringHttpMessageConverter"> -->
+<!-- </bean> -->
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+    <property name="prefix" value="/WEB-INF/views/" />
+    <property name="suffix" value=".jsp" />
+</bean>
+
+<!-- max upload size in bytes -->
+ <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <property name="maxUploadSize" value="104857600"/>
+ </bean>  
+</beans>

@@ -1,0 +1,13 @@
+package co.com.test.model;
+
+import java.sql.Date;
+
+public class Consumo {
+	
+	private long codigo;
+	
+	private Date fecha;
+	
+	
+
+}

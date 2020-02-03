@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="java.awt.image.ImageProducer"/>
+<fullyQualifiedTypeName name="java.nio.channels.AsynchronousServerSocketChannel"/>
+<fullyQualifiedTypeName name="co.com.test.model.TipoEspecialidad"/>
+<fullyQualifiedTypeName name="co.com.test.model.Consumo"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="co.com.test.dao.IPruebaSQL"/>
+<fullyQualifiedTypeName name="co.com.test.dao.IPruebaDAO"/>
+<fullyQualifiedTypeName name="co.com.test.model.Asesor"/>
+<fullyQualifiedTypeName name="co.com.test.model.Tarjeta"/>
+<fullyQualifiedTypeName name="co.com.test.model.TipoTarjeta"/>
+<fullyQualifiedTypeName name="co.com.test.model.Cliente"/>
+</qualifiedTypeNameHistroy>

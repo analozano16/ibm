@@ -1,0 +1,31 @@
+package co.com.test.controller;
+
+import javax.naming.InitialContext;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class PruebaController {
+	
+	 private Ip iEstructuraPlanDlloDAO;
+	//get
+
+	     @RequestMapping(value = "adicionContrato/get",  method = RequestMethod.GET)
+	     public @ResponseBody List <AdicionContrato> getAdicionContratos(AdicionContrato adicionContrato) throws Exception {
+	         try {
+	             // devuelve el contexto de la aplicación
+	             InitialContext context = new InitialContext();
+	             // devuelve la referencia del EJB
+	             iFichaTecnicaDAO = (IFichaTecnicaDAO)context.lookup("java:global/sspdd_ear/sspdd_fichatecnica_ejb-0.0.1/FichaTecnicaEJB");
+	              return iFichaTecnicaDAO.getAdicionContratos(adicionContrato);
+	         } catch (Exception e) {
+	             throw e;
+	         }
+	     }
+
+}

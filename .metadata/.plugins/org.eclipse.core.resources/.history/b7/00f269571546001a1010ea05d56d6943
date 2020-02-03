@@ -1,0 +1,16 @@
+var app = angular.module("Clientes",[]);
+
+app.controller("ClienteController", function($scope){
+	
+	$scope.init = function()
+    {
+		var element = document.getElementById('centro');
+		  console.log(document);
+		 angular.element(document).ready(function () {
+	        
+	      
+	    });
+    }
+
+    $scope.init();
+});

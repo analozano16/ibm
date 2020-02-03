@@ -1,0 +1,92 @@
+package co.com.test.controller;
+
+import java.util.List;
+
+import javax.naming.InitialContext;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import co.com.test.dao.IPruebaDAO;
+import co.com.test.model.Asesor;
+import co.com.test.model.Cliente;
+import co.com.test.model.Consumo;
+import co.com.test.model.Tarjeta;
+
+@Controller
+public class PruebaController {
+	
+	 private IPruebaDAO iPruebaDAO;
+	//get
+
+	     @RequestMapping(value = "adicionContrato/get",  method = RequestMethod.GET)
+	     public @ResponseBody List <Asesor> getAsesores(Asesor asesor) throws Exception {
+	         try {
+	             // devuelve el contexto de la aplicación
+	             InitialContext context = new InitialContext();
+	             // devuelve la referencia del EJB
+	             iPruebaDAO = (IPruebaDAO)context.lookup("java:global/prueba_banco_ejb-0.0.1/PruebaEJB");
+	              return iPruebaDAO.getAsesores(asesor);
+	         } catch (Exception e) {
+	             throw e;
+	         }
+	     }
+
+	     
+	     @RequestMapping(value = "adicionContrato/get",  method = RequestMethod.GET)
+	     public @ResponseBody List <Cliente> getClientes(Cliente cliente) throws Exception {
+	         try {
+	             // devuelve el contexto de la aplicación
+	             InitialContext context = new InitialContext();
+	             // devuelve la referencia del EJB
+	             iPruebaDAO = (IPruebaDAO)context.lookup("java:global/prueba_banco_ejb-0.0.1/PruebaEJB");
+	              return iPruebaDAO.getClientes(cliente);
+	         } catch (Exception e) {
+	             throw e;
+	         }
+	     }
+	     
+	     @RequestMapping(value = "adicionContrato/get",  method = RequestMethod.GET)
+	     public @ResponseBody List <Consumo> getConsumos(Consumo consumo) throws Exception {
+	         try {
+	             // devuelve el contexto de la aplicación
+	             InitialContext context = new InitialContext();
+	             // devuelve la referencia del EJB
+	             iPruebaDAO = (IPruebaDAO)context.lookup("java:global/prueba_banco_ejb-0.0.1/PruebaEJB");
+	              return iPruebaDAO.getConsumos(consumo);
+	         } catch (Exception e) {
+	             throw e;
+	         }
+	     }
+
+	     @RequestMapping(value = "adicionContrato/get",  method = RequestMethod.GET)
+	     public @ResponseBody List <Tarjeta> getTarjetas(Tarjeta tarjeta)  throws Exception {
+	         try {
+	             // devuelve el contexto de la aplicación
+	             InitialContext context = new InitialContext();
+	             // devuelve la referencia del EJB
+	             iPruebaDAO = (IPruebaDAO)context.lookup("java:global/prueba_banco_ejb-0.0.1/PruebaEJB");
+	              return iPruebaDAO.getTarjetas(tarjeta);
+	         } catch (Exception e) {
+	             throw e;
+	         }
+	     }
+	     
+	     @RequestMapping(value = "asesor/delete",  method = RequestMethod.POST)
+	     public @ResponseBody boolean deleteAsesor(@RequestBody Asesor asesor) throws Exception {
+	         try {
+	             // devuelve el contexto de la aplicación
+	             InitialContext context = new InitialContext();
+	             // devuelve la referencia del EJB
+	             iPruebaDAO = (IPruebaDAO)context.lookup("java:global/sspdd_ear/prueba_banco_ejb-0.0.1/PruebaEJB");
+	             return iPruebaDAO.deleteAsesor(asesor);
+	         } catch (Exception e) {
+	             throw e;
+	         }
+	     }
+
+}

@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+<!--  definicion proyecto sspdd_administracion_model pom -->
+  <groupId>co.com.test.model</groupId>
+  <artifactId>prueba_banco_model</artifactId>
+  <packaging>jar</packaging>
+  <name>prueba_banco_model</name>
+  <url>http://maven.apache.org</url>
+  <version>1</version>
+
+<!-- dependencias -->
+  
+ <build>
+	<plugins>
+	
+		<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.3.2</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+		
+	   <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-compiler-plugin</artifactId>
+		  <version>3.1</version>
+		  <configuration>
+			 <source>1.7</source>
+			 <target>1.7</target>			 
+		  </configuration>
+	   </plugin>
+	   
+	</plugins>    
+ </build>  
+  
+</project>

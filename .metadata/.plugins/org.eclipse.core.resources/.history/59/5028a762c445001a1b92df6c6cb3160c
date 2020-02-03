@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="prueba_banco">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="prueba_banco_ejb-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/prueba_banco_ejb/prueba_banco_ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="prueba_banco_model-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/prueba_banco_model/prueba_banco_model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/prueba_banco_war/target/classes"/>
+        <property name="component.inclusion.patterns"/>
+        <property name="component.exclusion.patterns"/>
+        <property name="context-root" value="prueba_banco_war"/>
+    </wb-module>
+</project-modules>

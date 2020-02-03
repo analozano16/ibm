@@ -1,0 +1,13 @@
+package co.com.test.model;
+
+public class Asesor {
+	
+	private long codigo;
+	
+	private String nombre;
+	
+	private String apellido;
+	
+	private TipoEspecialidad tipoEspecialidad;
+
+}
