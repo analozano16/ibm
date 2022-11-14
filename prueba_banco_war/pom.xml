@@ -15,7 +15,7 @@
 	<!-- Properties - versiones -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>3.2.3.RELEASE</spring.version>
+		<spring.version>3.2.18.RELEASE</spring.version>
 		<jackson.version>2.2.0</jackson.version>
 		<apachePOI.version>3.10-FINAL</apachePOI.version>
 		<apacheCommonsIO.version>2.4</apacheCommonsIO.version>
